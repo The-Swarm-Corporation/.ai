@@ -1,0 +1,22 @@
+NaturalAI-Executor: 
+
+```python
+# Fibonacci sequence Python script
+
+def fibonacci(n):
+    """
+    This function generates a Fibonacci sequence up to the nth number
+    """
+    # Initialize the first two numbers of the sequence
+    a, b = 0, 1
+
+    # Generate the sequence
+    for i in range(n):
+        yield a
+        a, b = b, a + b
+
+# Print the first 10 numbers of the Fibonacci sequence
+for number in fibonacci(10):
+    print(number)
+```
+This script when executed will print the first 10 numbers of the Fibonacci sequence to the console.
