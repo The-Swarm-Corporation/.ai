@@ -26,7 +26,7 @@ DotAI is a revolutionary natural language programming framework that allows you 
 ### Installation
 
 ```bash
-pip3 install dotai
+pip3 install ai-lang
 ```
 
 ### Create Your First .ai File
