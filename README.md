@@ -45,6 +45,18 @@ Create a JSON file with data about three planets including their name, distance 
 
 ```python
 
+from ai_lang.ai_lang import process_ai_file_sync
+from loguru import logger
+import sys
+
+try:
+    results = process_ai_file_sync("test.ai")
+    logger.info(f"Successfully processed {len(results)} requests")
+except Exception as e:
+    logger.exception(f"Failed to process file: {e}")
+    sys.exit(1)
+
+
 ```
 
 ## 📖 Usage Examples
@@ -89,8 +101,8 @@ Execute the script with sample data.
 Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
 
 ```bash
-git clone https://github.com/yourusername/dotai.git
-cd dotai
+git clone https://github.com/The-Swarm-Corporation/.ai.git
+cd .ai
 pip install -e ".[dev]"
 ```
 
@@ -106,7 +118,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 💡 Examples Repository
 
-Check out our [examples repository](https://github.com/yourusername/dotai-examples) for more use cases and implementation patterns.
+Check out our [examples repository](https://github.com/The-Swarm-Corporation/.ai) for more use cases and implementation patterns.
 
 ## ⚠️ Note
 
