@@ -132,5 +132,13 @@ Or use a `.env` file in your project directory:
 OPENAI_API_KEY=your-api-key-here
 ```
 
+# Todo
+
+- [ ] Add support for more LLMs (Function calling, and local models, you should have a config option to choose which one to use in the cli)
+- [ ] Add support for more file types (images, audio, video, etc, integrate with createnow.xyz)
+- [ ] Add support for more output formats (pdf, docx, etc)
+- [ ] Add support for more input types (image, audio, video, etc)
+- [ ] Add support for more task types (data analysis, data processing, data cleaning, etc)
+
 ---
 Made with ❤️ by the DotAI Team
