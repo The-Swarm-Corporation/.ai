@@ -46,6 +46,23 @@ ai-lang run example.ai
 
 ```
 
+## CLI Commands
+
+```bash
+Usage: ai-lang [OPTIONS] COMMAND [ARGS]...
+
+  DotAI - Natural Language Programming Language CLI
+
+Options:
+  --help  Show this message and exit.
+
+Commands:
+  init     Initialize a new .ai file with example content
+  run      Execute a .ai file and generate the requested files/code
+  version  Show the installed version
+
+```
+
 ## 📖 Usage Examples
 
 ### 1. Generate and Execute Python Code
