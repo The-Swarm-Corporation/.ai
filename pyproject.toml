@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "ai-lang"
-version = "0.0.1"
+version = "0.0.4"
 description = "DotAI - Natural Language Programming Language"
 license = "MIT"
 authors = ["Kye Gomez <kye@apac.ai>"]
@@ -32,6 +32,8 @@ swarm-models = "*"
 python-dotenv = "*"
 
 
+[tool.poetry.scripts]
+ai-lang = "ai_lang.cli:cli"
 
 
 [tool.poetry.group.lint.dependencies]
