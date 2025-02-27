@@ -1,15 +1,14 @@
-from pathlib import Path
-from typing import List, Dict, Any
-from loguru import logger
-
-import os
 import asyncio
-from swarms import Agent
-from swarm_models import OpenAIChat
-from dotenv import load_dotenv
 import json
+import os
 import subprocess
 import tempfile
+from pathlib import Path
+from typing import Any, Dict, List
+
+from dotenv import load_dotenv
+from loguru import logger
+from swarms import Agent
 
 
 class NaturalAIExecutor:
@@ -45,17 +44,10 @@ class NaturalAIExecutor:
         
         Always ensure outputs are practical and executable.
         """
-
-        model = OpenAIChat(
-            openai_api_key=self.api_key,
-            model_name="gpt-4",
-            temperature=0.7,
-        )
-
         return Agent(
             agent_name="NaturalAI-Executor",
             system_prompt=system_prompt,
-            llm=model,
+            model_name="gpt-4o",
             max_loops=1,
             autosave=True,
             dashboard=False,

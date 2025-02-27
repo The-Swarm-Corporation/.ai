@@ -24,10 +24,12 @@ BANNER = """
                                
 \033[0m"""
 
+
 def show_banner():
     """Display the DotAI banner"""
     click.echo(BANNER)
-    logger.info(f"Welcome to DotAI 🤖")
+    logger.info("Welcome to DotAI 🤖")
+
 
 @click.group()
 def cli():
@@ -50,7 +52,7 @@ def cli():
 def run(filepath: str, debug: bool, output: str, dry_run: bool):
     """Execute a .ai file and generate the requested files/code"""
     show_banner()
-    
+
     if debug:
         logger.remove()
         logger.add(
@@ -67,14 +69,18 @@ def run(filepath: str, debug: bool, output: str, dry_run: bool):
 
     try:
         if dry_run:
-            logger.info("🔍 Dry run - showing what would be executed:")
+            logger.info(
+                "🔍 Dry run - showing what would be executed:"
+            )
             with open(filepath) as f:
                 for line in f:
                     logger.info(f"📝 Would process: {line.strip()}")
             return
 
         results = process_ai_file_sync(filepath)
-        logger.info(f"✨ Successfully processed {len(results)} requests")
+        logger.info(
+            f"✨ Successfully processed {len(results)} requests"
+        )
 
         for result in results:
             if result["success"]:
@@ -104,7 +110,7 @@ def version():
 def init(filepath: str):
     """Initialize a new .ai file with example content"""
     show_banner()
-    
+
     if Path(filepath).exists():
         logger.error(f"⚠️ File {filepath} already exists")
         sys.exit(1)
